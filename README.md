@@ -1,2 +1,8 @@
 # rmeol_translate
-Remove end of line of text file, translate in french with googletrans package and write new translated.txt file. 
+Remove ends of lines in specific text file, translate in french with googletrans package and write new translated.txt file. 
+
+
+## Exemple
+`python path/to/rmeol/translate.py --textfile test.txt`
+This will create a new `traslated_test.txt` file in the rmeol directory.
+
