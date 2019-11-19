@@ -19,12 +19,11 @@ def __main__():
             if list_of_lines[i-1].endswith('-'):
                 text = text[:-1] + line
             elif line.endswith('.'):
-                text += line + '\n'
+                text += line + '\r\n'
             else:
                 text += " " + line
-        text = ' '.join(list_of_lines)
         translated = translator.translate(text, dest='fr')
         open('translated_%s'%file, 'w').write(translated.text)
-    
+
 if __name__=='__main__':
     __main__()
