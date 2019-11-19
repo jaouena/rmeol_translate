@@ -20,7 +20,7 @@ def __main__():
                 text = text[:-1] + line
             elif line.endswith('.'):
                 text += line + '\r\n'
-            else:
+            elif not line.endswith('-'):
                 text += line + " "
         translated = translator.translate(text, dest='fr')
         open('translated_%s'%file, 'w').write(translated.text)
