@@ -21,7 +21,7 @@ def __main__():
             elif line.endswith('.'):
                 text += line + '\r\n'
             else:
-                text += " " + line
+                text += line + " "
         translated = translator.translate(text, dest='fr')
         open('translated_%s'%file, 'w').write(translated.text)
 
